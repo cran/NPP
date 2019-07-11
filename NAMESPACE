@@ -1,0 +1,6 @@
+
+import(stats)
+
+export(BerNPP_MCMC, LaplacelogC, logCdelta, logCknot, loglikBerD0,
+       loglikNormD0, ModeDeltaBerNPP, ModeDeltaMultinomialNPP, ModeDeltaNormalNPP, ModeDeltaPoisNPP,
+       MultinomialNPP_MCMC, NormalNPP_MCMC, PoissonNPP_MCMC)
