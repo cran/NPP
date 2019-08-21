@@ -1,7 +1,7 @@
 Package: NPP
 Type: Package
 Title: Normalized Power Prior Bayesian Analysis
-Version: 0.1.0
+Version: 0.2.0
 Author: Zifei Han, Tianyu Bai and Keying Ye
 Maintainer: Zifei Han <hanzifei1@gmail.com>
 Description: Posterior sampling in several commonly used distributions using
@@ -16,6 +16,6 @@ LazyData: true
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2019-07-07 22:39:27 UTC; zifeihan
+Packaged: 2019-08-15 02:52:41 UTC; zifeihan
 Repository: CRAN
-Date/Publication: 2019-07-11 10:53:06 UTC
+Date/Publication: 2019-08-21 08:00:02 UTC

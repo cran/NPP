@@ -15,7 +15,7 @@ ModeDeltaNormalNPP(Data.Cur, Data.Hist,
                    CompStat = list(n0 = NULL, mean0 = NULL, var0 = NULL,
                                    n1 = NULL, mean1 = NULL, var1 = NULL),
                    npoints = 1000,
-                   prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1))
+                   prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1))
 }
 
 \arguments{
@@ -50,7 +50,7 @@ ModeDeltaNormalNPP(Data.Cur, Data.Hist,
              When \eqn{a = 1} it corresponds to the reference prior, and when \eqn{a = 1.5} it
              corresponds to the Jeffrey's prior.
 
-     \code{joint.a} is the power \eqn{a} in formula \eqn{(1/\sigma^2)^a}, the prior for \eqn{(\mu, \sigma^2)} jointly.
+     \code{a} is the power \eqn{a} in formula \eqn{(1/\sigma^2)^a}, the prior for \eqn{(\mu, \sigma^2)} jointly.
 
      \code{delta.alpha} is the hyperparameter \eqn{\alpha} in the prior distribution \eqn{Beta(\alpha, \beta)} for \eqn{\delta}.
 
@@ -76,15 +76,15 @@ See example.
 
 ModeDeltaNormalNPP(CompStat = list(n0 = 50, mean0 = 0, var0 = 1,
                                    n1 = 50, mean1 = 0, var1 = 1), npoints = 1000,
-                   prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1))
+                   prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1))
 
 ModeDeltaNormalNPP(CompStat = list(n0 = 50, mean0 = 0, var0 = 1,
                                    n1 = 40, mean1 = 0.2, var1 = 1), npoints = 1000,
-                   prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1))
+                   prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1))
 
 ModeDeltaNormalNPP(CompStat = list(n0 = 50, mean0 = 0, var0 = 1,
                                    n1 = 40, mean1 = 0.6, var1 = 1), npoints = 1000,
-                   prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1))
+                   prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1))
 
 }
 

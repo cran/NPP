@@ -5,6 +5,7 @@
 
 \description{
 Conduct posterior sampling for normal population with normalized power prior.
+The initial prior \eqn{\pi(\mu|\sigma^2)} is a flat prior.
 For the power parameter \eqn{\delta}, a Metropolis-Hastings algorithm with either
 independence proposal, or a random walk proposal on its logit scale is used.
 For the model parameter \eqn{\mu} and \eqn{\sigma^2}, Gibbs sampling is used.
@@ -15,7 +16,7 @@ For the model parameter \eqn{\mu} and \eqn{\sigma^2}, Gibbs sampling is used.
 NormalNPP_MCMC(Data.Cur, Data.Hist,
                CompStat = list(n0 = NULL, mean0 = NULL, var0 = NULL,
                                n1 = NULL, mean1 = NULL, var1 = NULL),
-               prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1),
+               prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1),
                MCMCmethod = 'IND', rw.logit.delta = 0.1,
                ind.delta.alpha= 1, ind.delta.beta= 1, nsample = 5000,
                control.mcmc = list(delta.ini = NULL, burnin = 0, thin = 1))
@@ -50,7 +51,7 @@ NormalNPP_MCMC(Data.Cur, Data.Hist,
              When \eqn{a = 1} it corresponds to the reference prior, and when \eqn{a = 1.5} it
              corresponds to the Jeffrey's prior.
 
-     \code{joint.a} is the power \eqn{a} in formula \eqn{(1/\sigma^2)^a}, the prior for \eqn{(\mu, \sigma^2)} jointly.
+     \code{a} is the power \eqn{a} in formula \eqn{(1/\sigma^2)^a}, the prior for \eqn{(\mu, \sigma^2)} jointly.
 
      \code{delta.alpha} is the hyperparameter \eqn{\alpha} in the prior distribution \eqn{Beta(\alpha, \beta)} for \eqn{\delta}.
 
@@ -121,7 +122,7 @@ NormalData1 <- rnorm(n = 50, mean= 30, sd = 1)
 NormalNPP_MCMC(Data.Cur = NormalData1, Data.Hist = NormalData0,
                CompStat = list(n0 = 100, mean0 = 10, var0 = 1,
                n1 = 100, mean1 = 10, var1 = 1),
-               prior = list(joint.a = 1.5, delta.alpha = 1, delta.beta = 1),
+               prior = list(a = 1.5, delta.alpha = 1, delta.beta = 1),
                MCMCmethod = 'RW', rw.logit.delta = 1,
                ind.delta.alpha= 1, ind.delta.beta= 1, nsample = 10000,
                control.mcmc = list(delta.ini = NULL, burnin = 0, thin = 1))
