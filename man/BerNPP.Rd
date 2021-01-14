@@ -21,9 +21,9 @@ BerNPP_MCMC(Data.Cur = c(100, 50), Data.Hist = c(100, 50),
 }
 
 \arguments{
-\item{Data.Cur}{a non-negative integer vector of two elements: c(number of success, number of failure) in the current data.}
+\item{Data.Cur}{a non-negative integer vector of two elements: c(number of trials, number of successes) in the current data.}
 
-\item{Data.Hist}{a non-negative integer vector of two elements: c(number of success, number of failure) in the historical data.}
+\item{Data.Hist}{a non-negative integer vector of two elements: c(number of trials, number of successes) in the historical data.}
 
 \item{CompStat}{a list of four elements that represents the
                 "compatibility(sufficient) statistics" for \eqn{p}.
