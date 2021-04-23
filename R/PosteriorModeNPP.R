@@ -48,7 +48,8 @@ ModeDeltaNormalNPP <- function(Data.Cur, Data.Hist,
 
   propDen <-  (x*n0/2+prior$a+prior$delta.alpha-2)*log(x)+(prior$delta.beta-1)*log(1-x)+
     lgamma((x*n0+n1-3)/2+prior$a)-lgamma((x*n0-3)/2+prior$a)-
-    ((x*n0+n1-3)/2+prior$a)*log((x*n1*(mean0-mean1)^2)/((x*n0+n1)*var0)+x+(n1*var1)/(n0*var0))
+    ((x*n0+n1-3)/2+prior$a)*log((x*n1*(mean0-mean1)^2)/((x*n0+n1)*var0)+x+(n1*var1)/(n0*var0))-
+    log(x*n0 +n1)/2
 
   deltamin = max(0, (3-2*prior$a)/n0)
   propDen = ifelse(x>deltamin, propDen, log(.Machine$double.xmin))
