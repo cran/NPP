@@ -1,0 +1,4 @@
+
+Version 0.5.0
+- update to accommodate the case with multiple historical data sets for Binary and Poisson count data
+
